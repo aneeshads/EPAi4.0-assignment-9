@@ -1,4 +1,6 @@
 
+import polygon
+import polygonsequence
 from polygon import Polygon
 from polygonsequence import PolygonSequence
 import pytest
