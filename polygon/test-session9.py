@@ -70,7 +70,7 @@ def test_session9_function_name_had_cap_letter():
     '''PEP8 gudelines state that function names cannnot have capital letters in them. This test checks if there are any \
     capital lettes within function names and throws error if there are.'''
 
-    functions = inspect.getmembers(polygon, inspect.isfunction)
+    functions = inspect.getmembers(polygon.py, inspect.isfunction)
     for function in functions:
         assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
 
