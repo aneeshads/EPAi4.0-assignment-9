@@ -8,6 +8,7 @@
 # b. supports the len() function (__len__)
 # c. has a proper representation (__repr__)
 
+from polygon import Polygon
 
 class PolygonSequence:
     '''This class creates a sequence of polygons with varying number of vertices and the same circumradius.The least possible \
@@ -38,13 +39,13 @@ class PolygonSequence:
                 s = self._maxn + s
             if (0 <= s) and (s < 3):
                 return None
-            return Polygon(s, self._r)
+            return polygon.Polygon(s, self._r)
         else:
             # slice being requested
             print(f'requesting [{s.start}:{s.stop}:{s.step}]')
             idx = s.indices(self._maxn)
             rng = range(idx[0], idx[1], idx[2])
-            return [Polygon(n, self._r) if n > 2 else None for n in rng]
+            return [polygon.Polygon(n, self._r) if n > 2 else None for n in rng]
 
     def __repr__(self):
         '''The dunder method of representation returns the polygon with the maxium number  of vertices and the common circumradius.'''
@@ -58,7 +59,7 @@ class PolygonSequence:
 
         apr_list = []
         for idx in range(3, self._maxn):
-            p = Polygon(idx, self._r)
+            p = polygon.Polygon(idx, self._r)
             area_perimeter_ratio = p.area / p.perimeter
             apr_list.append(area_perimeter_ratio)
         return max(apr_list)
