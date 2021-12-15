@@ -20,34 +20,37 @@ class PolygonSequence:
         self._maxn = maxvertices
         self._r = circumradius
 
+
     def __len__(self):
-        '''The dunder method of length returns the number of polygons that are present within the sequence'''
+        '''The dunder method of length returns the number of polygons that are present within the sequence.'''
 
         return self._maxn
 
+
     def __getitem__(self, s):
-        '''The dunder method of getitem selects the highest possible index'''
+        '''The dunder method of getitem selects the highest possible index.'''
 
         if isinstance(s, int):
             # single item requested
-            if s > self._maxn or s:
+            if s > (self._maxn - 1):
                 raise IndexError
             if s < 0:
                 s = self._maxn + s
-            if s < 0 or s > self._maxn - 1:
-                raise IndexError
+            if (0 <= s) and (s < 3):
+                return None
             return Polygon(s, self._r)
         else:
             # slice being requested
             print(f'requesting [{s.start}:{s.stop}:{s.step}]')
             idx = s.indices(self._maxn)
             rng = range(idx[0], idx[1], idx[2])
-            return [Polygon(n, self._r) for n in rng]
-    
+            return [Polygon(n, self._r) if n > 2 else None for n in rng]
+
     def __repr__(self):
         '''The dunder method of representation returns the polygon with the maxium number  of vertices and the common circumradius.'''
 
         return (f'This is a PolygonSequence class with polygons upto {self._maxn} vertices and {self._r} circumradius')
+
 
     def maximum_efficient_polygon(self):
         '''A polygon that has the highest area:perimeter ratio is denoted as the maximum efficiency polygon.\
