@@ -17,6 +17,15 @@ class PolygonSequence:
 
     def __init__(self, maxvertices, circumradius):
         '''The class is initialized in a way that it can accept the arguments of maximum vertices and circumradius.'''
+        
+        if (isinstance(maxvertices, int)) == False:
+            raise TypeError("Please enter an integer only")
+        if (maxvertices < 0):
+            raise ValueError("TThe max number of vertices should be a positive value")
+        if ((isinstance(circumradius, int) or isinstance(circumradius, float)) == False):
+            raise TypeError("The value of circumradius should be an int or a float")
+        if (circumradius < 0):
+            raise ValueError("The value of circumradius should be positive")
 
         self._maxn = maxvertices
         self._r = circumradius
