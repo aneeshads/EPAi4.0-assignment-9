@@ -70,7 +70,7 @@ def test_session9_function_name_had_cap_letter():
     '''PEP8 gudelines state that function names cannnot have capital letters in them. This test checks if there are any \
     capital lettes within function names and throws error if there are.'''
 
-    functions = inspect.getmembers(session9, inspect.isfunction)
+    functions = inspect.getmembers(polygon, inspect.isfunction)
     for function in functions:
         assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
 
@@ -225,8 +225,8 @@ def test_session9_polygonsequence_index_access():
     ps = PolygonSequence(10, 5)
     p1 = ps[3]
     p2 = ps[5]
-    assert isinstance(p1, session9.Polygon), "Indexing does not seem to work on PolygonSequence"
-    assert isinstance(p2, session9.Polygon), "Indexing does not seem to work on PolygonSequence"
+    assert isinstance(p1, Polygon), "Indexing does not seem to work on PolygonSequence"
+    assert isinstance(p2, Polygon), "Indexing does not seem to work on PolygonSequence"
 
 
 def test_session9_polygonsequence_negative_index_access():
@@ -235,8 +235,8 @@ def test_session9_polygonsequence_negative_index_access():
     ps = PolygonSequence(10, 5)
     p1 = ps[-3]
     p2 = ps[-5]
-    assert isinstance(p1, session9.Polygon), "Negative indexing does not seem to work on PolygonSequence"
-    assert isinstance(p2, session9.Polygon), "Negative indexing does not seem to work on PolygonSequence"
+    assert isinstance(p1, Polygon), "Negative indexing does not seem to work on PolygonSequence"
+    assert isinstance(p2, Polygon), "Negative indexing does not seem to work on PolygonSequence"
 
 
 def test_session9_polygonsequence_slice_access():
