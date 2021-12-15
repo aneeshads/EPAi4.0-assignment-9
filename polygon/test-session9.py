@@ -1,6 +1,6 @@
 
-from polygon.polygon import Polygon
-from polygon.polygon import PolygonSequence
+from polygon import Polygon
+from polygonsequence import PolygonSequence
 import pytest
 import inspect
 import os
