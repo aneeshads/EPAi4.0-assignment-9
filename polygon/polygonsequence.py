@@ -17,7 +17,6 @@ class PolygonSequence:
 
     def __init__(self, maxvertices, circumradius):
         '''The class is initialized in a way that it can accept the arguments of maximum vertices and circumradius.'''
-        
         if (isinstance(maxvertices, int)) == False:
             raise TypeError("Please enter an integer only")
         if (maxvertices < 0):
