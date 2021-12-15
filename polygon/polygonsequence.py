@@ -8,7 +8,7 @@
 # b. supports the len() function (__len__)
 # c. has a proper representation (__repr__)
 
-from polygon import Polygon
+from polygon.polygon import Polygon
 
 class PolygonSequence:
     '''This class creates a sequence of polygons with varying number of vertices and the same circumradius.The least possible \
@@ -39,7 +39,7 @@ class PolygonSequence:
                 s = self._maxn + s
             if (0 <= s) and (s < 3):
                 return None
-            return polygon.Polygon(s, self._r)
+            return Polygon(s, self._r)
         else:
             # slice being requested
             print(f'requesting [{s.start}:{s.stop}:{s.step}]')
