@@ -58,7 +58,14 @@ def test_session9_readme_file_for_more_than_10_hashes():
 def test_session9_indentations():
     '''Test to check if the indentation in the session9.py file follows the PEP8 guidelines'''
 
-    lines = inspect.getsource(session9)
+    lines = inspect.getsource(Polygon)
+    spaces = re.findall('\n +.', lines)
+    for space in spaces:
+        print(space)
+        assert len(space) % 4 == 2, "Your script contains misplaced indentations"
+        assert len(re.sub(r'[^ ]', '', space)) % 4 == 0, "Your code indentation does not follow PEP8 guidelines"
+        
+    lines = inspect.getsource(PolygonSequence)
     spaces = re.findall('\n +.', lines)
     for space in spaces:
         print(space)
@@ -71,6 +78,10 @@ def test_session9_function_name_had_cap_letter():
     capital lettes within function names and throws error if there are.'''
 
     functions = inspect.getmembers(Polygon, inspect.isfunction)
+    for function in functions:
+        assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
+    
+    functions = inspect.getmembers(PolygonSequence, inspect.isfunction)
     for function in functions:
         assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
 
