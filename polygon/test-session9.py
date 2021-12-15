@@ -1,7 +1,6 @@
 
 from polygon.polygon import Polygon
 from polygon.polygon import PolygonSequence
-
 import pytest
 import inspect
 import os
