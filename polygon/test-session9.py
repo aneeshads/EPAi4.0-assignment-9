@@ -1,14 +1,11 @@
 
-#import polygon
-#import polygonsequence
-from polygon import Polygon
-from polygon import PolygonSequence
-#from polygonsequence import PolygonSequence
 import pytest
 import inspect
 import os
 import re 
 
+from polygon import Polygon
+from polygon import PolygonSequence
 
 README_CONTENT_CHECK_FOR = [
     'Polygon',
