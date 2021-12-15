@@ -1,8 +1,9 @@
 
-import polygon
-import polygonsequence
+#import polygon
+#import polygonsequence
 from polygon import Polygon
-from polygonsequence import PolygonSequence
+from polygon import PolygonSequence
+#from polygonsequence import PolygonSequence
 import pytest
 import inspect
 import os
