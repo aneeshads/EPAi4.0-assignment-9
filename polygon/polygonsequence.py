@@ -8,7 +8,7 @@
 # b. supports the len() function (__len__)
 # c. has a proper representation (__repr__)
 
-from polygon.polygon import Polygon
+from polygon import Polygon
 
 class PolygonSequence:
     '''This class creates a sequence of polygons with varying number of vertices and the same circumradius.The least possible \
