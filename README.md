@@ -7,8 +7,8 @@
 
 In Python, a sequence can be defined as a container that can essentially preserve the order of a collection of homogeneous or heterogeneous items which are iterable and indexable. Sequences can be further classified as mutable – where the items can be modified – and non-mutable – where the items cannot be modified. Examples of immutable sequences include tuple, strings etc., whereas examples of mutable sequences include list, dictionaries etc.
 
-The present assignment is about accepting such arguments as number of vertices and the length of the circumradius of a polygon, and then making a module that will include the formula for calculating such measures as ¬¬
-
+The present assignment is about accepting such arguments as number of vertices and the length of the circumradius of a polygon, and then making a module that will include the formula for calculating different parameters related to the polygon.
+ 
 ## Description of classes implemented in the current code
 
 ### Polygon
