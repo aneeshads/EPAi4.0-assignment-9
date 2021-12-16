@@ -24,7 +24,7 @@ The initializer function defines that the class accepts two parameters - the num
 ##### Usage:
 Polygon(numberofvertices, circumradius)
 
-where, numberofvertices = number of vertices input by the user,
+where, numberofvertices = number of vertices input by the user, </br>
        cirumradius = circumradius input by the user
 
 
@@ -43,7 +43,7 @@ The dunder method of equality has been defined to compare and return with an aff
 ##### Usage:
 polygon1 == polygon2
 
-where,  polygon1 = Polygon(numberofvertices1, circumradius1),
+where,  polygon1 = Polygon(numberofvertices1, circumradius1),</br>
 	polygon2 = Polygon(numberofvertices2, circumradius2)
    
 
@@ -54,7 +54,7 @@ The dunder method of greater than has been defined to compare and return with an
 ##### Usage:
 polygon1 > polygon2
 
-where,  polygon1 = Polygon(numberofvertices1, circumradius1),
+where,  polygon1 = Polygon(numberofvertices1, circumradius1),</br>
 	polygon2 = Polygon(numberofvertices2, circumradius2)
 
 
